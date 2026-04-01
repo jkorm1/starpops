@@ -48,6 +48,27 @@ const showcaseImages = [
     category: "Lifestyle",
     featured: false,
   },
+  {
+    id: 7,
+    src: "/image4.jpg",
+    alt: "Couple sharing popcorn",
+    category: "Lifestyle",
+    featured: false,
+  },
+  {
+    id: 8,
+    src: "/enjoy5.jpg",
+    alt: "Couple sharing popcorn",
+    category: "Lifestyle",
+    featured: false,
+  },
+  {
+    id: 9,
+    src: "/enjoy6.jpg",
+    alt: "Couple sharing popcorn",
+    category: "Lifestyle",
+    featured: false,
+  },
 ];
 
 // Video data with local video paths
@@ -61,20 +82,27 @@ const showcaseVideos = [
   },
   {
     id: 2,
-    src: "/video2.mov",
-    thumbnail: "/thumbnail2.jpg",
-    title: "Crafting Perfection",
-    description: "Watch our artisans create the perfect popcorn with passion.",
-  },
-  {
-    id: 3,
     src: "/video3.mov",
     thumbnail: "/thumbnail3.jpg",
     title: "Flavor Explosion",
     description: "Discover the unique flavors that make Starpops special.",
   },
   {
+    id: 3,
+    src: "/video2.mov",
+    thumbnail: "/thumbnail2.jpg",
+    title: "Crafting Perfection",
+    description: "Watch our artisans create the perfect popcorn with passion.",
+  },
+  {
     id: 4,
+    src: "/video3.mov",
+    thumbnail: "/thumbnail3.jpg",
+    title: "Flavor Explosion",
+    description: "Discover the unique flavors that make Starpops special.",
+  },
+  {
+    id: 5,
     src: "/video4.mov",
     thumbnail: "/thumbnail4.jpg",
     title: "Joy in Every Kernel",
