@@ -1,45 +1,45 @@
-'use client'
+"use client";
 
-import { motion, AnimatePresence } from 'framer-motion'
-import { X, ShoppingCart } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { useCart } from '@/hooks/use-cart'
-import { useState, useRef } from 'react'
-import { toast } from 'sonner'
+import { motion, AnimatePresence } from "framer-motion";
+import { X, ShoppingCart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useCart } from "@/hooks/use-cart";
+import { useState, useRef } from "react";
+import { toast } from "sonner";
 
 export function CartSummary() {
-  const items = useCart((state) => state.items)
-  const removeItem = useCart((state) => state.removeItem)
-  const updateQuantity = useCart((state) => state.updateQuantity)
-  const getTotal = useCart((state) => state.getTotal)
-  const clearCart = useCart((state) => state.clearCart)
-  const [isOpen, setIsOpen] = useState(false)
-  const cartRef = useRef<HTMLDivElement>(null)
+  const items = useCart((state) => state.items);
+  const removeItem = useCart((state) => state.removeItem);
+  const updateQuantity = useCart((state) => state.updateQuantity);
+  const getTotal = useCart((state) => state.getTotal);
+  const clearCart = useCart((state) => state.clearCart);
+  const [isOpen, setIsOpen] = useState(false);
+  const cartRef = useRef<HTMLDivElement>(null);
 
   const handleCheckout = () => {
     if (items.length === 0) {
-      toast.error('Your cart is empty')
-      return
+      toast.error("Your cart is empty");
+      return;
     }
 
-    toast.success('Order submitted! We will contact you shortly.')
-    clearCart()
-    setIsOpen(false)
-  }
+    toast.success("Order submitted! We will contact you shortly.");
+    clearCart();
+    setIsOpen(false);
+  };
 
   const openCart = () => {
-    setIsOpen(true)
+    setIsOpen(true);
     setTimeout(() => {
-      cartRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    }, 100)
-  }
+      cartRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 100);
+  };
 
   return (
     <>
       {/* Floating Cart Button */}
       <motion.button
         data-cart-button
-        onClick={() => isOpen ? setIsOpen(false) : openCart()}
+        onClick={() => (isOpen ? setIsOpen(false) : openCart())}
         className="fixed bottom-8 right-8 z-40 p-4 rounded-full bg-primary text-primary-foreground shadow-2xl hover:scale-110 transition-transform"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -68,10 +68,10 @@ export function CartSummary() {
             {/* Drawer */}
             <motion.div
               ref={cartRef}
-              initial={{ x: '100%' }}
+              initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
               className="fixed right-0 top-0 h-full w-full max-w-md bg-card border-l border-border shadow-2xl z-50 flex flex-col"
             >
               {/* Header */}
@@ -105,7 +105,9 @@ export function CartSummary() {
                         <div className="flex justify-between items-start mb-3">
                           <div>
                             <p className="font-semibold">{item.categoryName}</p>
-                            <p className="text-sm text-muted-foreground">{item.flavor}</p>
+                            <p className="text-sm text-muted-foreground">
+                              {item.flavor}
+                            </p>
                           </div>
                           <button
                             onClick={() => removeItem(item.id)}
@@ -118,20 +120,31 @@ export function CartSummary() {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <button
-                              onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}
+                              onClick={() =>
+                                updateQuantity(
+                                  item.id,
+                                  Math.max(1, item.quantity - 1),
+                                )
+                              }
                               className="w-6 h-6 rounded bg-muted flex items-center justify-center text-xs"
                             >
                               −
                             </button>
-                            <span className="w-6 text-center font-semibold">{item.quantity}</span>
+                            <span className="w-6 text-center font-semibold">
+                              {item.quantity}
+                            </span>
                             <button
-                              onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                              onClick={() =>
+                                updateQuantity(item.id, item.quantity + 1)
+                              }
                               className="w-6 h-6 rounded bg-muted flex items-center justify-center text-xs"
                             >
                               +
                             </button>
                           </div>
-                          <p className="font-semibold">{(item.price * item.quantity).toFixed(2)} GHS</p>
+                          <p className="font-semibold">
+                            {(item.price * item.quantity).toFixed(2)} GHS
+                          </p>
                         </div>
                       </motion.div>
                     ))}
@@ -149,7 +162,9 @@ export function CartSummary() {
                     </div>
                     <div className="flex justify-between text-lg font-bold">
                       <span>Total</span>
-                      <span className="text-primary">{getTotal().toFixed(2)} GHS</span>
+                      <span className="text-primary">
+                        {getTotal().toFixed(2)} GHS
+                      </span>
                     </div>
                   </div>
 
@@ -174,5 +189,5 @@ export function CartSummary() {
         )}
       </AnimatePresence>
     </>
-  )
+  );
 }
