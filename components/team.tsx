@@ -9,7 +9,7 @@ const team = [
     description:
       "Leading the vision and strategy of Starpops with passion and innovation",
     color: "from-yellow-500/30 to-orange-500/30",
-    image: "/joseph.jpg",
+    image: "/jkorm.png",
   },
   {
     name: "Christian Frimpong",
