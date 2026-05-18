@@ -210,7 +210,7 @@ export function Hero() {
         >
           <h2 className="text-5xl md:text-7xl font-bold mb-2">
             <span className="glow-text-gold">STAR</span>
-            <span className="glow-text-pink">POPS</span>
+            <span className="glow-text-gold">POPS</span>
           </h2>
           <p className="text-xl md:text-2xl text-primary font-semibold italic mb-2">
             Feel the pops!
@@ -228,7 +228,7 @@ export function Hero() {
           className="relative w-64 h-64 md:w-80 md:h-80 my-8 md:my-12 animate-spin-smooth z-20"
         >
           <Image
-            src="/ultimate-popcorn-hero.png"
+            src="/hero.png"
             alt="Ultimate Starpops - Premium Popcorn"
             fill
             className="object-cover rounded-full shadow-2xl glow-gold"
@@ -247,10 +247,11 @@ export function Hero() {
           <Button
             onClick={() => scrollToSection("products")}
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-white font-bold text-xl md:text-3xl px-12 md:px-16 py-7 md:py-10 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 active:scale-95"
+            className="bg-primary hover:bg-primary/90 text-white font-bold text-xl md:text-3xl px-16 md:px-24 py-7 md:py-10 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 active:scale-95"
           >
             ORDER NOW
           </Button>
+
           <p className="text-sm md:text-base text-muted-foreground mt-6 opacity-80 max-w-md">
             Experience the Magic of Every Kernel
           </p>

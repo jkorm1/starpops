@@ -1,4 +1,7 @@
 "use client";
+import Link from "next/link";
+import Image from "next/image";
+import { Instagram, Music } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -78,23 +81,42 @@ export function Footer() {
 
           <div>
             <h4 className="font-bold mb-4">Connect</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Facebook
-                </a>
-              </li>
-            </ul>
+            <div className="flex items-center gap-4">
+              <Link
+                href="https://www.instagram.com/starpops1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/instagram.png"
+                  alt="Instagram"
+                  width={40}
+                  height={40}
+                />
+              </Link>
+              <Link
+                href="https://www.snapchat.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/snapchat.png"
+                  alt="Snapchat"
+                  width={40}
+                  height={40}
+                />
+              </Link>
+              <Link
+                href="https://www.tiktok.com/@starpops_1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <Image src="/tiktok.png" alt="TikTok" width={40} height={40} />
+              </Link>
+            </div>
           </div>
         </div>
 

@@ -1,6 +1,8 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { google } from "googleapis"
 import { JWT } from "google-auth-library"
+import { sendOrderNotification } from "@/lib/twilio"
+
 
 async function getSheetsClient() {
   const credentials = process.env.GOOGLE_SHEETS_CREDENTIALS
@@ -33,19 +35,27 @@ export async function POST(request: NextRequest) {
     const date = new Date();
     const orderDate = `${date.getDate()}-${date.toLocaleString('default', { month: 'long' })}-${date.getFullYear()}; ${date.toLocaleTimeString('default', { hour: 'numeric', minute: '2-digit', hour12: true })}`;
 
+     // Send SMS notification
+    const smsResult = await sendOrderNotification(orderData, orderId)
+    if (!smsResult.success) {
+      console.warn("SMS notification failed:", smsResult.message)
+    }
 
     // Prepare order data for the Orders sheet
     const orderRow = [
-      orderId,
-      orderDate,
-      orderData.customer.name,
-      orderData.customer.phone,
-      orderData.customer.address,
-      JSON.stringify(orderData.items),
-      orderData.total,
-      orderData.note || "No note",
-      "Pending", // Initial status
-    ]
+    orderId,
+    `'${orderDate}`, // Add single quote prefix to force text format
+    orderData.customer.name,
+    `'${orderData.customer.phone}`, // Add single quote prefix to force text format
+    orderData.customer.address,
+    JSON.stringify(orderData.items.map((item: any) => ({
+      ...item,
+      flavor: item.category === "starter" ? "N/A" : item.flavor
+    }))),
+    orderData.total,
+    orderData.note || "No note",
+    "Pending", // Initial status
+  ]
 
     // Add order to Orders sheet
     await sheets.spreadsheets.values.append({
@@ -75,14 +85,14 @@ export async function POST(request: NextRequest) {
 
     // If customer doesn't exist, add them to the Customers sheet
     if (!customerExists) {
-      const customerRow = [
-        orderData.customer.name,
-        orderData.customer.phone,
-        orderData.customer.address,
-        `First order: ${orderId}`,
-       `${new Date().getDate()}-${new Date().toLocaleString('default', { month: 'long' })}-${new Date().getFullYear()}; ${new Date().toLocaleTimeString('default', { hour: 'numeric', minute: '2-digit', hour12: true })}`,
+     const customerRow = [
+      orderData.customer.name,
+      `'${orderData.customer.phone}`, // Add single quote prefix to force text format
+      orderData.customer.address,
+      `First order: ${orderId}`,
+      `'${new Date().getDate()}-${new Date().toLocaleString('default', { month: 'long' })}-${new Date().getFullYear()}; ${new Date().toLocaleTimeString('default', { hour: 'numeric', minute: '2-digit', hour12: true })}`, // Add single quote prefix to force text format
+    ]
 
-      ]
 
       await sheets.spreadsheets.values.append({
         spreadsheetId,
