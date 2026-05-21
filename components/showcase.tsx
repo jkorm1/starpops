@@ -75,35 +75,35 @@ const showcaseImages = [
 const showcaseVideos = [
   {
     id: 1,
-    src: "/video1.mov",
+    src: "/video1.MOV",
     thumbnail: "/thumbnail1.jpg",
     title: "Starpops Magic",
     description: "Experience the enchanting journey of our premium popcorn.",
   },
   {
     id: 2,
-    src: "/video2.mov",
+    src: "/video2.MOV",
     thumbnail: "/thumbnail2.jpg",
     title: "Flavor Explosion",
     description: "Discover the unique flavors that make Starpops special.",
   },
   {
     id: 3,
-    src: "/video3.mov",
+    src: "/video3.MOV",
     thumbnail: "/thumbnail3.jpg",
     title: "Crafting Perfection",
     description: "Watch our artisans create the perfect popcorn with passion.",
   },
   {
     id: 4,
-    src: "/video4.mov",
+    src: "/video4.MOV",
     thumbnail: "/thumbnail4.jpg",
     title: "Flavor Explosion",
     description: "Discover the unique flavors that make Starpops special.",
   },
   {
     id: 5,
-    src: "/video5.mov",
+    src: "/video5.MOV",
     thumbnail: "/thumbnail5.jpg",
     title: "Joy in Every Kernel",
     description:
@@ -111,7 +111,7 @@ const showcaseVideos = [
   },
   {
     id: 6,
-    src: "/video6.mov",
+    src: "/video6.MOV",
     thumbnail: "/thumbnail6.jpg",
     title: "Joy in Every Kernel",
     description:
@@ -119,7 +119,7 @@ const showcaseVideos = [
   },
   {
     id: 7,
-    src: "/video7.mov",
+    src: "/video7.MOV",
     thumbnail: "/thumbnail7.jpg",
     title: "Joy in Every Kernel",
     description:
@@ -128,7 +128,7 @@ const showcaseVideos = [
 
   {
     id: 8,
-    src: "/video9.mov",
+    src: "/video9.MOV",
     thumbnail: "/thumbnail9.jpg",
     title: "Joy in Every Kernel",
     description:
