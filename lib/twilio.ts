@@ -68,7 +68,7 @@ console.log("Sending SMS with message:", finalMessage)
 
 
      const twilioResponse = await twilio.messages.create({
-      body: message,
+      body: finalMessage,
       from: twilioPhoneNumber,
       to: recipientPhoneNumber
     })
