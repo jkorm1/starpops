@@ -75,8 +75,8 @@ const showcaseImages = [
 const showcaseVideos = [
   {
     id: 1,
-    src: "/video1.MOV",
-    thumbnail: "/thumbnail1.jpg",
+    src: "/video11.MOV",
+    thumbnail: "/thumbnail.jpg",
     title: "Starpops Magic",
     description: "Experience the enchanting journey of our premium popcorn.",
   },
@@ -98,8 +98,8 @@ const showcaseVideos = [
     id: 4,
     src: "/video4.MOV",
     thumbnail: "/thumbnail4.jpg",
-    title: "Flavor Explosion",
-    description: "Discover the unique flavors that make Starpops special.",
+    title: "Golden Crunch",
+    description: "Taste the perfect balance of crisp and flavor.",
   },
   {
     id: 5,
@@ -113,26 +113,60 @@ const showcaseVideos = [
     id: 6,
     src: "/video6.MOV",
     thumbnail: "/thumbnail6.jpg",
-    title: "Joy in Every Kernel",
-    description:
-      "Real stories from our customers experiencing the Starpops magic.",
+    title: "Kernel Bliss ",
+    description: "Every bite sparks joy and delight.",
   },
   {
     id: 7,
     src: "/video7.MOV",
     thumbnail: "/thumbnail7.jpg",
-    title: "Joy in Every Kernel",
-    description:
-      "Real stories from our customers experiencing the Starpops magic.",
+    title: "Popcorn Dreams",
+    description: "Where imagination meets irresistible taste.",
   },
 
   {
     id: 8,
     src: "/video9.MOV",
     thumbnail: "/thumbnail9.jpg",
+    title: "Flavor Journey  ",
+    description: "Travel through tastes that surprise and excite.",
+  },
+  {
+    id: 9,
+    src: "/video10.MOV",
+    thumbnail: "/thumbnail10.jpg",
+    title: "Moments to Share",
+    description: "Popcorn that brings people together",
+  },
+  {
+    id: 10,
+    src: "/video11.MOV",
+    thumbnail: "/thumbnail11.jpg",
     title: "Joy in Every Kernel",
     description:
       "Real stories from our customers experiencing the Starpops magic.",
+  },
+  {
+    id: 11,
+    src: "/video12.MOV",
+    thumbnail: "/thumbnail12.jpg",
+    title: "Joy in Every Kernel",
+    description:
+      "Real stories from our customers experiencing the Starpops magic.",
+  },
+  {
+    id: 12,
+    src: "/video1.MOV",
+    thumbnail: "/thumbnail1.jpg",
+    title: "Starpops Magic",
+    description: "Experience the enchanting journey of our premium popcorn.",
+  },
+  {
+    id: 13,
+    src: "/video13.MOV",
+    thumbnail: "/thumbnail13.jpg",
+    title: "Pure Pop Delight",
+    description: "Simple ingredients, extraordinary experiences.",
   },
 ];
 
