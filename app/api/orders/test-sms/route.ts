@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { sendOrderNotification } from "@/lib/twilio"
+import { sendOrderNotification } from "@/lib/telegram"
 
 export async function POST(request: NextRequest) {
   try {

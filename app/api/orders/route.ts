@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { google } from "googleapis"
 import { JWT } from "google-auth-library"
-import { sendOrderNotification } from "@/lib/twilio"
+import { sendOrderNotification } from "@/lib/telegram"
 
 
 async function getSheetsClient() {
