@@ -13,6 +13,7 @@ export function Checkout() {
   const items = useCart((state) => state.items);
   const getTotal = useCart((state) => state.getTotal);
   const clearCart = useCart((state) => state.clearCart);
+  const removeItem = useCart((state) => state.removeItem);
   const router = useRouter();
 
   const [name, setName] = useState("");
@@ -119,15 +120,38 @@ export function Checkout() {
                   key={item.id}
                   className="flex justify-between items-center p-3 bg-muted/50 rounded-lg"
                 >
-                  <div>
+                  <div className="flex-1">
                     <p className="font-semibold">{item.categoryName}</p>
                     <p className="text-sm text-muted-foreground">
                       {item.flavor} × {item.quantity}
                     </p>
                   </div>
-                  <p className="font-bold">
-                    {(item.price * item.quantity).toFixed(2)} CEDIS
-                  </p>
+                  <div className="flex items-center gap-4">
+                    <p className="font-bold">
+                      {(item.price * item.quantity).toFixed(2)} CEDIS
+                    </p>
+                    <button
+                      onClick={() => removeItem(item.id)}
+                      className="p-2 text-muted-foreground hover:text-destructive transition-colors"
+                      aria-label="Remove item"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M3 6h18"></path>
+                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>

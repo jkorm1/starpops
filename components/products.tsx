@@ -76,6 +76,12 @@ export function Products() {
     toast.success(`Added ${quantities[product.id]}x ${product.name} to cart!`);
     setExpandedProduct(null);
     setQuantities({ ...quantities, [product.id]: 1 });
+
+    // Navigate to checkout section
+    setTimeout(() => {
+      const checkoutSection = document.getElementById("checkout");
+      checkoutSection?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   };
 
   return (
@@ -105,11 +111,24 @@ export function Products() {
           >
             {/* Product Image Card - Clickable */}
             <motion.div
-              onClick={() =>
-                setExpandedProduct(
-                  expandedProduct === product.id ? null : product.id,
-                )
-              }
+              onClick={() => {
+                const isExpanding = expandedProduct !== product.id;
+                setExpandedProduct(isExpanding ? product.id : null);
+
+                // Scroll to the expanded form with a slight delay to allow the expansion to start
+                if (isExpanding) {
+                  setTimeout(() => {
+                    const productCard = document.getElementById(
+                      `product-${product.id}`,
+                    );
+                    productCard?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    });
+                  }, 100);
+                }
+              }}
+              id={`product-${product.id}`}
               className="relative h-80 cursor-pointer overflow-hidden border-2 border-primary/30 hover:border-primary transition-all duration-300 rounded-xl group"
             >
               <Image
