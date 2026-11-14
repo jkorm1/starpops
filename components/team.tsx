@@ -18,13 +18,7 @@ const team = [
     color: "from-pink-500/30 to-rose-500/30",
     image: "/christian.jpg",
   },
-  {
-    name: "Alvin Asare",
-    role: "Sales Manager",
-    description: "Driving sales growth and connecting Starpops with customers",
-    color: "from-blue-500/30 to-purple-500/30",
-    image: "/alvin.jpg",
-  },
+
   {
     name: "Jackson Budu",
     role: "Operations Manager",
@@ -80,7 +74,7 @@ export function Team() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-4 gap-8"
+          className="grid md:grid-cols-3 gap-8 justify-items-center"
         >
           {team.map((member, idx) => (
             <motion.div key={idx} variants={itemVariants} className="group">

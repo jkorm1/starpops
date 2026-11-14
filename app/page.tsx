@@ -7,10 +7,12 @@ import { Showcase } from "@/components/showcase";
 import { Team } from "@/components/team";
 import { Footer } from "@/components/footer";
 import { Toaster } from "sonner";
+import { ShimmerLoader } from "@/components/shimmer-loader";
 
 export default function Home() {
   return (
     <main className="w-full">
+      <ShimmerLoader />
       <Navigation />
       <Hero />
       <Products />

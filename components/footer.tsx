@@ -96,7 +96,7 @@ export function Footer() {
                 />
               </Link>
               <Link
-                href="https://www.snapchat.com/"
+                href="https://snapchat.com/t/alGNrfLH"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
