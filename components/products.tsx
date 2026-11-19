@@ -21,24 +21,19 @@ const products = [
     id: "starter",
     name: "Starter",
     price: 10,
-    image: "/starter-popcorn.jpg",
+    image:
+      "https://res.cloudinary.com/dtmzgtkw9/image/upload/v1795097443/starter-popcorn.png",
     description: "Popcorn, Milk",
     flavors: ["Caramel", "Strawberry", "Chocolate"],
   },
-  {
-    id: "deluxe",
-    name: "Deluxe",
-    price: 15,
-    image: "/deluxe-popcorn.jpg",
-    description:
-      "Popcorn, Milk,  Choice of Caramel or Strawberry topping, Skittles",
-    flavors: ["Caramel", "Strawberry"],
-  },
+
   {
     id: "ultimate",
     name: "Ultimate",
     price: 20,
-    image: "/ultimate-popcorn.jpg",
+    image:
+      "https://res.cloudinary.com/dtmzgtkw9/image/upload/v1795097446/ultimate-popcorn.png",
+
     description:
       "Popcorn, Milk, Choice of Caramel or Strawberry topping, Skittles, Gelly Gummies, Oreos",
     flavors: ["Caramel", "Strawberry"],
@@ -100,7 +95,7 @@ export function Products() {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {products.map((product, idx) => (
           <motion.div
             key={product.id}

@@ -75,35 +75,35 @@ const showcaseImages = [
 const showcaseVideos = [
   {
     id: 1,
-    src: "/video11.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091770/video11.mp4",
     thumbnail: "/thumbnail.jpg",
     title: "Starpops Magic",
     description: "Experience the enchanting journey of our premium popcorn.",
   },
   {
     id: 2,
-    src: "/video2.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091768/video2.mp4",
     thumbnail: "/thumbnail2.jpg",
     title: "Flavor Explosion",
     description: "Discover the unique flavors that make Starpops special.",
   },
   {
     id: 3,
-    src: "/video3.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091764/video3.mp4",
     thumbnail: "/thumbnail3.jpg",
     title: "Crafting Perfection",
     description: "Watch our artisans create the perfect popcorn with passion.",
   },
   {
     id: 4,
-    src: "/video4.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091769/video8.mp4",
     thumbnail: "/thumbnail4.jpg",
     title: "Golden Crunch",
-    description: "Taste the perfect balance of crisp and flavor.",
+    description: "Taste the perfect balance of cris p and flavor.",
   },
   {
     id: 5,
-    src: "/video5.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091767/video5.mp4",
     thumbnail: "/thumbnail5.jpg",
     title: "Joy in Every Kernel",
     description:
@@ -111,14 +111,15 @@ const showcaseVideos = [
   },
   {
     id: 6,
-    src: "/video6.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091764/video6.mp4",
+
     thumbnail: "/thumbnail6.jpg",
     title: "Kernel Bliss ",
     description: "Every bite sparks joy and delight.",
   },
   {
     id: 7,
-    src: "/video7.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091767/video7.mp4",
     thumbnail: "/thumbnail7.jpg",
     title: "Popcorn Dreams",
     description: "Where imagination meets irresistible taste.",
@@ -126,21 +127,21 @@ const showcaseVideos = [
 
   {
     id: 8,
-    src: "/video9.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091770/video9.mp4",
     thumbnail: "/thumbnail9.jpg",
     title: "Flavor Journey  ",
     description: "Travel through tastes that surprise and excite.",
   },
   {
     id: 9,
-    src: "/video10.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091769/video10.mp4",
     thumbnail: "/thumbnail10.jpg",
     title: "Moments to Share",
     description: "Popcorn that brings people together",
   },
   {
     id: 10,
-    src: "/video11.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091770/video11.mp4",
     thumbnail: "/thumbnail11.jpg",
     title: "Joy in Every Kernel",
     description:
@@ -148,7 +149,7 @@ const showcaseVideos = [
   },
   {
     id: 11,
-    src: "/video12.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091773/video12.mp4",
     thumbnail: "/thumbnail12.jpg",
     title: "Joy in Every Kernel",
     description:
@@ -156,14 +157,14 @@ const showcaseVideos = [
   },
   {
     id: 12,
-    src: "/video1.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091767/video1.mp4",
     thumbnail: "/thumbnail1.jpg",
     title: "Starpops Magic",
     description: "Experience the enchanting journey of our premium popcorn.",
   },
   {
     id: 13,
-    src: "/video13.MOV",
+    src: "https://res.cloudinary.com/dtmzgtkw9/video/upload/v1795091771/video13.mp4",
     thumbnail: "/thumbnail13.jpg",
     title: "Pure Pop Delight",
     description: "Simple ingredients, extraordinary experiences.",

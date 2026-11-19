@@ -231,7 +231,7 @@ export function Hero() {
             src="/hero.png"
             alt="Ultimate Starpops - Premium Popcorn"
             fill
-            className="object-cover rounded-full shadow-2xl glow-gold"
+            className="object-contain rounded-full shadow-2xl glow-gold"
             priority
             loading="eager"
           />
